@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20131219072226) do
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "refresh_token"
+    t.string   "oauth_token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

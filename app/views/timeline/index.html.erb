@@ -1,20 +1,27 @@
-<h1>Timeline#index</h1>
-<p>Find me in app/views/timeline/index.html.erb</p>
-
+<h1>Glass Message Sender</h1>
 
 <% if flash[:notice] %>
- <div class="alert alert-success">
- <button type="button" class="close" data-dismiss="alert">&times;</button>
- <%= flash[:notice] %>
- </div>
+	 <div class="alert alert-success">
+		 <button type="button" class="close" data-dismiss="alert">&times;</button>
+		 <%= flash[:notice] %>
+	 </div>
 <% elsif flash[:alert] %>
- <div class="alert alert-error">
- <button type="button" class="close" data-dismiss="alert">&times;</button>
- <%= flash[:alert] %>
- </div>
+	 <div class="alert alert-error">
+		 <button type="button" class="close" data-dismiss="alert">&times;</button>
+		 <%= flash[:alert] %>
+	 </div>
 <% end %>
  
 <% if current_user %>
-helow
- <%= link_to 'Send Offer', insert_offer_path, method: :post, class: "btn btn-primary" %>
+	<%= form_for(String.new) do |f| %>
+		<div class="">
+			    <%= f.text_field :text, class: "form-control", autofocus: true, placeholder: "Please, write in the text box the message to be sent to your Glass!"  %>
+			    <%= f.submit 'Send Message', class: "pull-left btn btn-primary" %>
+
+		</div>
+	<% end %>
 <% end %>
+
+
+
+

@@ -5,9 +5,12 @@ ClassApp::Application.routes.draw do
   get "/auth/:provider/callback" => "sessions#create"
   delete "/signout" => "sessions#destroy", as: :signout
   #get "timeline/index"
-  post "/send_message" => "timeline#send_message", as: :send_message
+  #post "/sendMessage" => "timeline#sendessage", as: :send_message
 
   root "timeline#index"
+    #get "/send_message" => "timeline#send_message", as: :send_message
+    post "/" => "timeline#send_message"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
