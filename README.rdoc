@@ -4,7 +4,8 @@
 1. Create a Google API Console project (https://developers.google.com/glass/develop/mirror/quickstart/ruby)
 2. Clone this folder to your local computer
 3. Execute Bundle install
-4. Copy CLIENT ID and CLIENT SECRET information from Google API Console to config/application.yml
-5. Execute rails s
-6. Log in with your Google Id that is related to your glass
-7. Send a message and see it on your Glass !!
+4. Execute rake db:migrate
+5. Copy CLIENT ID and CLIENT SECRET information from Google API Console to config/application.yml
+6. Execute rails s
+7. Log in with your Google Id that is related to your glass
+8. Send a message and see it on your Glass !!
